@@ -9,6 +9,7 @@
         display: none;
     }
 }
+
 @media screen and (max-height: 375px) {
     #main-button {
         display: none;
@@ -87,8 +88,6 @@
         flex-direction: column;
         margin-top: 20px;
     }
-
-    /* .header-item (logo) */
     .header-item.header-logo {
         margin-right: auto;
         padding-left: 20px;
@@ -186,68 +185,75 @@
         color: #fff;
         padding-top: 80px;
     }
-
-    /* .accout */
     .account {
         display: -webkit-flex;
         display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
         width: 100%;
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+        -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+        box-shadow: 0 1px 3px rgba(0,0,0,.25);
         background-color: #f7d146;
     }
     .account-item {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        height: 34px;
-        line-height: 34px;
-        text-align: left;
+        height: 24px;
+        line-height: 24px;
         color: #111;
-        font-weight: 400;
-        font-size: 1rem;
+        letter-spacing: 1px;
+        font-size: .75rem;
+        font-weight: 800;
+        margin: 5px;
+        background-color: #f7d146;
+        border: 1px solid #131313;
+    }
+    .account-item .material-icons {
+        vertical-align: middle;
+        margin-bottom: 1px;
+        background-color: #131313;
+        color: #fff;
+        margin-right: 5px;
+        font-size: 18px;
+        line-height: 24px;
+        width: 24px;
+        height: 24px;
         text-align: center;
-        border-right: 1px solid rgba(0,0,0,.15);
+        margin-right: 10px;
     }
     .account-name {
-        width: 100%;
-        padding-left: 20px;
-        text-align: left;
-        letter-spacing: 1px;
-        font-size: .875rem;
-        font-weight: 800;
+        width: 33.3333%;
     }
     .account-balance {
-        padding-left: 20px;
-        padding-right: 20px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        font-size: .875rem;
-    }
-    .account-add-balance img {
-        max-width: 24px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
+        width: 33.3333%;
     }
     .account-add-balance {
-        border-right: none;
-        background-color: #0e8044;
-        padding-left: 20px;
-        padding-right: 20px;
+        width: 33.3333%;
+        background-color: #28a745;
+        color: #fff;
+        border: dotted 1px rgba(0,0,0,0.15);
+    }
+    .account-add-balance .material-icons {
         -webkit-transition: background-color .2s linear;
         -o-transition: background-color .2s linear;
         transition: background-color .2s linear;
+        background-color: rgba(0,0,0,0.15);
     }
     .account-add-balance.open {
         background-color: #131313;
         -webkit-transition: background-color .2s linear;
         -o-transition: background-color .2s linear;
         transition: background-color .2s linear;
+        color: #fff;
+    }
+    .account-add-balance img {
+        max-width: 24px;
+        margin-right: auto;
+        vertical-align: middle;
     }
     .account-expand {
         display: none;
         background-color: #131313;
-        padding: 20px 40px;
+        padding: 40px;
     }
     .account-expand-change {
         font-size: .75rem;
@@ -259,10 +265,11 @@
     .account-expand-title {
         margin-top: 20px;
         margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     .account-expand-card {
-        border: solid 1px #111;
-        background-color: #202020;
+        background-color: #303030;
         line-height: 40px;
         height: 40px;
         padding-left: 20px;
@@ -289,7 +296,6 @@
     .account-expand-buttons {
         display: -webkit-flex;
         display: flex;
-        margin-top: 5px;
     }
     .account-expand-button {
         display: block;
@@ -302,45 +308,49 @@
         width: 33.333%;
         text-align: center;
         margin: 5px;
-        line-height: 40px;
+        line-height: 22px;
         font-weight: 700;
-        border: solid 2px #f7d146;
+        border: solid 1px #f7d146;
         color: #f7d146;
     }
     .account-expand-button-own {
         display: block;
         border: solid 1px #fff;
         margin-bottom: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 0.75rem;
         background-color: #fff;
         width: auto;
         text-align: center;
         margin: 5px;
         line-height: 40px;
-        color: #111;
+        color: #999;
+        -webkit-box-shadow: inset 0px 0px 10px 6px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 0px 10px 6px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 0px 10px 6px rgba(0,0,0,0.25);
     }
     .account-expand-button-submit {
         width: auto;
         text-align: center;
         margin: 5px;
-        line-height: 44px;
+        line-height: 40px;
         text-transform: uppercase;
-        background-color: #0e8044;
-        color: #fff;
+        border: solid 2px #f7d146;
+        color: #f7d146;
         font-weight: 800;
         letter-spacing: 1px;
-        font-size: .875rem;
+        font-size: 1.5rem;
         margin-bottom: 10px;
         margin-top: 10px;
     }
     .account-expand-button-submit:hover {
-        background-color: #086d38;
+        background-color: #1b8c35;
     }
     .account-expand-button:hover {
         background-color: #f7d146;
         color: #111;
     }
-
-    /* main */
     #main-title {
         color: #fff;
         text-transform: uppercase;
@@ -369,8 +379,6 @@
         background-color: #f7d146;
         color: #111;
     }
-
-    /* content-blocks */
     .content-blocks {
         padding: 20px;
     }
@@ -515,8 +523,6 @@
     #sidepanel ul li a:hover {
         color: #f7d146;
     }
-
-    /* .sidepanel-list-one */
     #sidepanel .sidepanel-list-one li {
         padding-bottom: 10px;
     }
@@ -528,8 +534,6 @@
         padding-bottom: 10px;
         font-weight: 700;
     }
-
-    /* .sidepanel-list-two */
     #sidepanel .sidepanel-list-two li {
         padding-bottom: 10px;
     }
@@ -541,8 +545,6 @@
         padding-bottom: 10px;
         font-weight: 700;
     }
-
-    /* .sidepanel-list-three */
     #sidepanel .sidepanel-list-three li a {
         font-size: 2rem;
         padding-bottom: 0px;
